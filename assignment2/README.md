@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+I created notes app using React, where you can add notes, delete notes and toggle screen. Also, its responsive in nature.
+With this Project you can learn about components, hooks and about localstorage.
+
+Live Project link:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
