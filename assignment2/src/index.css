@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
+  transition: 1s all;
+}
+
+.main-box{
+  max-width: 1000px;
+  margin:10px auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  border: 0.2px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+
+.header{
+  padding: 15px;
+  margin:  0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container{
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  align-items: center;
+  gap: 1px;
+  margin-inline: auto;
+  max-width: 968px;
+  background-color: white;
+ margin-inline: 14px;
+}
+
+
+
+.search-container .search-icons{
+  font-size:1.6rem ;
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.search-container input{
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+}
+.notes-container{ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-gap: 1rem;
+  padding: 15px 15px;
+}
+
+.note{
+  padding: 15px;
+  font-size: 1rem;
+  min-height: 220px;
+  background-color: rgb(245, 245, 137);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.notes-footer{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.32s;
+  background-color: white;
+}
+
+.delete-btn:hover{
+  background-color: red;
+  color: white;
+}
+
+.new-note{
+  background-color: aquamarine;
+}
+.new-note textarea{
+
+background-color: transparent;
+border: none;
+outline: none;
+resize: none;
+height: 75%;
+padding: 8px;
+margin-right: 3px;
+font-size: 1rem;
+color: rgb(62, 59, 59);
+}
+
+.add-note-footer{
+ padding-block-start: 10px;
+ color: black;
+}
+.add-note-footer .add-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.32s;
+  background-color: white;
+
+}
+
+.add-btn:hover{
+  background-color: rgb(138, 138, 246);
+  color: white;
+}
+
+.darkmode{
+  background-color: black;
+  color: white;
+  transition: 1s all;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+  }
